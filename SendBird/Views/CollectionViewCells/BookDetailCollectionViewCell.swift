@@ -10,9 +10,15 @@ import UIKit
 
 class BookDetailCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - View Components
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var bookTitleLabel: UILabel!
+    @IBOutlet private weak var bookSubtitleLabel: UILabel!
+
+    public func configure(book: Book) {
+        bookTitleLabel.text = book.title
+        bookSubtitleLabel.text = book.subtitle
+        imageView.asyncLoadImage(from: book.image)
     }
 
 }
