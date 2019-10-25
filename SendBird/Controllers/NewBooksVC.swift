@@ -118,3 +118,10 @@ extension NewBooksVC: UICollectionViewDelegateFlowLayout {
         return 8
     }
 }
+
+// MARK: - UICollectionViewDelegate
+extension NewBooksVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(books[indexPath.row])
+    }
+}
