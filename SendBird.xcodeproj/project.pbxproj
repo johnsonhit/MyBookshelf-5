@@ -14,6 +14,15 @@
 		ABC857D1236169F700CA2BE5 /* NewBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857D0236169F700CA2BE5 /* NewBooksVC.swift */; };
 		ABC857D623616A5600CA2BE5 /* SearchBooksVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857D423616A5600CA2BE5 /* SearchBooksVC.swift */; };
 		ABC857D723616A5600CA2BE5 /* SearchBooksVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC857D523616A5600CA2BE5 /* SearchBooksVC.xib */; };
+		ABC857DA23616BF500CA2BE5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857D923616BF500CA2BE5 /* NetworkManager.swift */; };
+		ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857DB23616CC700CA2BE5 /* EndpointProtocol.swift */; };
+		ABC857E12361715700CA2BE5 /* NewBooksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857E02361715700CA2BE5 /* NewBooksEndpoint.swift */; };
+		ABC857E4236172C100CA2BE5 /* NewBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857E3236172C100CA2BE5 /* NewBooksResponse.swift */; };
+		ABC857E6236172E300CA2BE5 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857E5236172E300CA2BE5 /* Book.swift */; };
+		ABC857F22362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857F02362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift */; };
+		ABC857F32362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC857F12362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib */; };
+		ABC857F62362B13E00CA2BE5 /* SB+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857F52362B13E00CA2BE5 /* SB+UIImageView.swift */; };
+		ABC857F82362B65C00CA2BE5 /* Constraints+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		ABC857D0236169F700CA2BE5 /* NewBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksVC.swift; sourceTree = "<group>"; };
 		ABC857D423616A5600CA2BE5 /* SearchBooksVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksVC.swift; sourceTree = "<group>"; };
 		ABC857D523616A5600CA2BE5 /* SearchBooksVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBooksVC.xib; sourceTree = "<group>"; };
+		ABC857D923616BF500CA2BE5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ABC857DB23616CC700CA2BE5 /* EndpointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointProtocol.swift; sourceTree = "<group>"; };
+		ABC857E02361715700CA2BE5 /* NewBooksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksEndpoint.swift; sourceTree = "<group>"; };
+		ABC857E3236172C100CA2BE5 /* NewBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksResponse.swift; sourceTree = "<group>"; };
+		ABC857E5236172E300CA2BE5 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		ABC857F02362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		ABC857F12362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailCollectionViewCell.xib; sourceTree = "<group>"; };
+		ABC857F52362B13E00CA2BE5 /* SB+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+UIImageView.swift"; sourceTree = "<group>"; };
+		ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,9 @@
 		ABC857BA2361657300CA2BE5 /* SendBird */ = {
 			isa = PBXGroup;
 			children = (
+				ABC857F42362B13000CA2BE5 /* Extensions */,
+				ABC857E72362AE9100CA2BE5 /* Views */,
+				ABC857D823616AF800CA2BE5 /* Network */,
 				ABC857CF236169E300CA2BE5 /* Controllers */,
 				ABC857BB2361657300CA2BE5 /* AppDelegate.swift */,
 				ABC857BD2361657300CA2BE5 /* SceneDelegate.swift */,
@@ -76,6 +97,60 @@
 				ABC857D523616A5600CA2BE5 /* SearchBooksVC.xib */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ABC857D823616AF800CA2BE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857E2236172B600CA2BE5 /* Models */,
+				ABC857DD23616DFD00CA2BE5 /* Endpoints */,
+				ABC857D923616BF500CA2BE5 /* NetworkManager.swift */,
+				ABC857DB23616CC700CA2BE5 /* EndpointProtocol.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		ABC857DD23616DFD00CA2BE5 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857E02361715700CA2BE5 /* NewBooksEndpoint.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		ABC857E2236172B600CA2BE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857E3236172C100CA2BE5 /* NewBooksResponse.swift */,
+				ABC857E5236172E300CA2BE5 /* Book.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ABC857E72362AE9100CA2BE5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857EF2362AF4100CA2BE5 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ABC857EF2362AF4100CA2BE5 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857F02362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift */,
+				ABC857F12362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		ABC857F42362B13000CA2BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857F52362B13E00CA2BE5 /* SB+UIImageView.swift */,
+				ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +211,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC857F32362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib in Resources */,
 				ABC857D723616A5600CA2BE5 /* SearchBooksVC.xib in Resources */,
 				ABC857C82361657400CA2BE5 /* LaunchScreen.storyboard in Resources */,
 				ABC857C52361657400CA2BE5 /* Assets.xcassets in Resources */,
@@ -149,10 +225,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC857E4236172C100CA2BE5 /* NewBooksResponse.swift in Sources */,
 				ABC857D1236169F700CA2BE5 /* NewBooksVC.swift in Sources */,
+				ABC857E12361715700CA2BE5 /* NewBooksEndpoint.swift in Sources */,
 				ABC857BC2361657300CA2BE5 /* AppDelegate.swift in Sources */,
+				ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */,
+				ABC857E6236172E300CA2BE5 /* Book.swift in Sources */,
+				ABC857F22362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift in Sources */,
+				ABC857DA23616BF500CA2BE5 /* NetworkManager.swift in Sources */,
+				ABC857F62362B13E00CA2BE5 /* SB+UIImageView.swift in Sources */,
 				ABC857D623616A5600CA2BE5 /* SearchBooksVC.swift in Sources */,
 				ABC857BE2361657300CA2BE5 /* SceneDelegate.swift in Sources */,
+				ABC857F82362B65C00CA2BE5 /* Constraints+UIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

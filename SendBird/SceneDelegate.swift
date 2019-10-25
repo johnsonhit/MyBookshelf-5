@@ -18,8 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 
+        let networkManager = NetworkManager()
+
         let tabBarVC = UITabBarController()
-        tabBarVC.viewControllers = [NewBooksVC(), SearchBooksVC()]
+        tabBarVC.viewControllers = [NewBooksVC(networkManager: networkManager), SearchBooksVC()]
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()
     }
