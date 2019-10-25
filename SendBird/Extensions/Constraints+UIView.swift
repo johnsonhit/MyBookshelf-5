@@ -10,30 +10,30 @@ import UIKit
 
 extension UIView {
     func constraintToTopSafeArea(of view: UIView) -> NSLayoutConstraint {
+        let topSafeAreaIdentifier = "topSafeAreaCons"
+        removePreviousConstraint(from: view, with: topSafeAreaIdentifier)
+
         let topSafeInsets = view.safeAreaInsets.top
-        let topSafeAreaConsName = "topSafeAreaCons"
-        // Remove previous active constraint
-        for constraint in view.constraints {
-            if constraint.identifier == topSafeAreaConsName {
-                constraint.isActive = false
-            }
-        }
         let topSafeAreaCons = topAnchor.constraint(equalTo: view.topAnchor, constant: topSafeInsets)
-        topSafeAreaCons.identifier = topSafeAreaConsName
+        topSafeAreaCons.identifier = topSafeAreaIdentifier
         return topSafeAreaCons
     }
 
     func constraintToBottomSafeArea(of view: UIView) -> NSLayoutConstraint {
+        let bottomSafeAreaIdentifier = "bottomSafeAreaCons"
+        removePreviousConstraint(from: view, with: bottomSafeAreaIdentifier)
+
         let bottomSafeInsets = view.safeAreaInsets.bottom
-        let bottomSafeAreaConsName = "bottomSafeAreaCons"
-        // Remove previous active constraint
+        let bottomSafeAreaCons = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomSafeInsets)
+        bottomSafeAreaCons.identifier = bottomSafeAreaIdentifier
+        return bottomSafeAreaCons
+    }
+
+    private func removePreviousConstraint(from view: UIView, with identifier: String) {
         for constraint in view.constraints {
-            if constraint.identifier == bottomSafeAreaConsName {
+            if constraint.identifier == identifier {
                 constraint.isActive = false
             }
         }
-        let bottomSafeAreaCons = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: bottomSafeInsets)
-        bottomSafeAreaCons.identifier = bottomSafeAreaConsName
-        return bottomSafeAreaCons
     }
 }

@@ -28,6 +28,9 @@ class NewBooksVC: UIViewController {
     // MARK: - Class Properties
     private let networkManager: NetworkManager
 
+    private let paddingBetweenCells: CGFloat = 10
+    private let paddingBetweenMargins: CGFloat = 20
+
     private var books: [Book] = [] {
         didSet {
             collectionView.reloadData()
@@ -94,15 +97,17 @@ extension NewBooksVC: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout
 extension NewBooksVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingBetweenCells: CGFloat = 10.0
         let totalWidth = collectionView.bounds.width
-        let cellWidth = (totalWidth - (paddingBetweenCells * 3.0)) / 2.0
+        let cellWidth = (totalWidth - paddingBetweenCells - paddingBetweenMargins) / 2.0
         // Split into two columns
         return CGSize(width: cellWidth, height: cellWidth)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        .zero
+        return UIEdgeInsets.init(top: 0,
+                                 left: paddingBetweenMargins / 2,
+                                 bottom: 0,
+                                 right: paddingBetweenMargins / 2)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

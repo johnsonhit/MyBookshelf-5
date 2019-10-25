@@ -16,6 +16,6 @@ extension UIImageView {
             DispatchQueue.main.async() {
                 self.image = UIImage(data: data)
             }
-        }
+        }.resume()
     }
 }
