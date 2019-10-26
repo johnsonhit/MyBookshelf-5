@@ -72,16 +72,35 @@ extension BookDetailVC {
     }
 }
 
+private enum BookDetailCell: Int {
+    case header = 0
+    case description = 1
+}
+
 // MARK: - UITableViewDataSource
 extension BookDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let bookDetailHeaderCell: BookDetailHeaderCell = tableView.dequeReusableCell() else { return UITableViewCell() }
-        bookDetailHeaderCell.configure(book: book)
-        return bookDetailHeaderCell
+        let bookDetailCell = BookDetailCell(rawValue: indexPath.row)
+        switch bookDetailCell {
+        case .header:
+            if let bookDetailHeaderCell: BookDetailHeaderCell = tableView.dequeReusableCell() {
+                bookDetailHeaderCell.configure(book: book)
+                return bookDetailHeaderCell
+            }
+        case .description:
+            let cell = UITableViewCell()
+            cell.textLabel?.numberOfLines = 0
+            cell.textLabel?.text = book.subtitle
+            return cell
+        case .none:
+            return UITableViewCell()
+        }
+        // This should never reach
+        return UITableViewCell()
     }
 
 }

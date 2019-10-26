@@ -14,10 +14,12 @@ class BookDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var bookTitleLabel: UILabel!
     @IBOutlet private weak var bookSubtitleLabel: UILabel!
+    @IBOutlet private weak var bookPriceLabel: UILabel!
 
     public func configure(book: Book) {
         bookTitleLabel.text = book.title
         bookSubtitleLabel.text = book.subtitle
+        bookPriceLabel.text = " \(book.price) "
         imageView.asyncLoadImage(from: book.image)
     }
 

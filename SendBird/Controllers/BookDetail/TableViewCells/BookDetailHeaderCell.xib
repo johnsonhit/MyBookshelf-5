@@ -9,77 +9,76 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="166" id="KGk-i7-Jjw" customClass="BookDetailHeaderCell" customModule="SendBird" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="369" height="166"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="297" id="KGk-i7-Jjw" customClass="BookDetailHeaderCell" customModule="SendBird" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="297"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="369" height="166"/>
+                <rect key="frame" x="0.0" y="0.0" width="464" height="297"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gez-8b-f67">
-                        <rect key="frame" x="8" y="16" width="100" height="134"/>
+                        <rect key="frame" x="182" y="16" width="100" height="134"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="134" id="cVN-M9-NPK"/>
-                            <constraint firstAttribute="width" constant="100" id="oND-CS-E2o"/>
+                            <constraint firstAttribute="width" constant="100" id="ivc-mf-S98"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AJB-WX-2QP">
-                        <rect key="frame" x="116" y="16" width="245" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BookSubtitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IN-YI-20k">
+                        <rect key="frame" x="16" y="158" width="432" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AuthorLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZr-Oh-ie6">
-                        <rect key="frame" x="116" y="44.5" width="245" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BookTitle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnK-Dc-Wcl">
+                        <rect key="frame" x="16" y="193" width="432" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PublisherLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyF-aU-oWl">
-                        <rect key="frame" x="116" y="73.5" width="245" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BookAuthor" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEZ-xX-y6x">
+                        <rect key="frame" x="16" y="222" width="432" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sgx-fX-pn2">
-                        <rect key="frame" x="317" y="106" width="44" height="44"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-Uh-sIS" customClass="RatingsView" customModule="SendBird" customModuleProvider="target">
+                        <rect key="frame" x="8" y="257.5" width="152" height="24"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="44" id="LP6-fV-WXf"/>
-                            <constraint firstAttribute="width" constant="44" id="qzx-Yt-lAm"/>
+                            <constraint firstAttribute="width" constant="152" id="ia8-gM-kCF"/>
+                            <constraint firstAttribute="height" constant="24" id="mkg-96-aCv"/>
                         </constraints>
-                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" image="ellipsis.circle.fill" catalog="system"/>
-                    </button>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="AJB-WX-2QP" secondAttribute="trailing" constant="8" id="3Ej-E0-pce"/>
-                    <constraint firstAttribute="bottom" secondItem="gez-8b-f67" secondAttribute="bottom" constant="16" id="6ip-ZE-qVj"/>
-                    <constraint firstAttribute="trailing" secondItem="Sgx-fX-pn2" secondAttribute="trailing" constant="8" id="7QQ-ws-WZp"/>
-                    <constraint firstItem="Sgx-fX-pn2" firstAttribute="bottom" secondItem="gez-8b-f67" secondAttribute="bottom" id="95x-4g-gqn"/>
-                    <constraint firstItem="gez-8b-f67" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Hfr-pc-HGM"/>
-                    <constraint firstItem="HZr-Oh-ie6" firstAttribute="top" secondItem="AJB-WX-2QP" secondAttribute="bottom" constant="8" id="NKW-TT-pyd"/>
+                    <constraint firstItem="uEZ-xX-y6x" firstAttribute="trailing" secondItem="FnK-Dc-Wcl" secondAttribute="trailing" id="3OO-qr-9kI"/>
+                    <constraint firstItem="gez-8b-f67" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4HI-kY-sqO"/>
+                    <constraint firstItem="FnK-Dc-Wcl" firstAttribute="centerX" secondItem="4IN-YI-20k" secondAttribute="centerX" id="5B6-9l-rQ2"/>
+                    <constraint firstItem="4IN-YI-20k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9Vc-AL-Oai"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="e8q-Uh-sIS" secondAttribute="bottom" constant="8" id="Ain-9R-cTN"/>
+                    <constraint firstItem="uEZ-xX-y6x" firstAttribute="centerX" secondItem="FnK-Dc-Wcl" secondAttribute="centerX" id="LgI-yU-iv7"/>
+                    <constraint firstItem="FnK-Dc-Wcl" firstAttribute="top" secondItem="4IN-YI-20k" secondAttribute="bottom" constant="18" id="WML-b7-7Ym"/>
+                    <constraint firstItem="4IN-YI-20k" firstAttribute="centerX" secondItem="gez-8b-f67" secondAttribute="centerX" id="XqT-Jd-V5g"/>
+                    <constraint firstItem="FnK-Dc-Wcl" firstAttribute="trailing" secondItem="4IN-YI-20k" secondAttribute="trailing" id="Zn5-Ek-7Ow"/>
+                    <constraint firstItem="e8q-Uh-sIS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="d3z-Xy-uBR"/>
                     <constraint firstItem="gez-8b-f67" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="eqC-Ad-lIW"/>
-                    <constraint firstItem="JyF-aU-oWl" firstAttribute="trailing" secondItem="HZr-Oh-ie6" secondAttribute="trailing" id="eyU-SG-Jf8"/>
-                    <constraint firstItem="AJB-WX-2QP" firstAttribute="top" secondItem="gez-8b-f67" secondAttribute="top" id="iDl-ZI-4EM"/>
-                    <constraint firstItem="HZr-Oh-ie6" firstAttribute="trailing" secondItem="AJB-WX-2QP" secondAttribute="trailing" id="lfJ-M5-X4g"/>
-                    <constraint firstItem="JyF-aU-oWl" firstAttribute="leading" secondItem="HZr-Oh-ie6" secondAttribute="leading" id="mVn-KC-XQA"/>
-                    <constraint firstItem="HZr-Oh-ie6" firstAttribute="leading" secondItem="AJB-WX-2QP" secondAttribute="leading" id="ohN-Rc-hIj"/>
-                    <constraint firstItem="AJB-WX-2QP" firstAttribute="leading" secondItem="gez-8b-f67" secondAttribute="trailing" constant="8" id="tw1-4D-lek"/>
-                    <constraint firstItem="JyF-aU-oWl" firstAttribute="top" secondItem="HZr-Oh-ie6" secondAttribute="bottom" constant="8" id="yxW-W5-d88"/>
+                    <constraint firstAttribute="trailing" secondItem="4IN-YI-20k" secondAttribute="trailing" constant="16" id="g4M-gK-yeu"/>
+                    <constraint firstItem="4IN-YI-20k" firstAttribute="top" secondItem="gez-8b-f67" secondAttribute="bottom" constant="8" id="g98-JD-qQY"/>
+                    <constraint firstItem="e8q-Uh-sIS" firstAttribute="top" secondItem="uEZ-xX-y6x" secondAttribute="bottom" constant="16" id="gMm-ng-95B"/>
+                    <constraint firstItem="FnK-Dc-Wcl" firstAttribute="leading" secondItem="4IN-YI-20k" secondAttribute="leading" id="hDY-gd-OjD"/>
+                    <constraint firstItem="uEZ-xX-y6x" firstAttribute="leading" secondItem="FnK-Dc-Wcl" secondAttribute="leading" id="x1t-vY-bFi"/>
+                    <constraint firstItem="uEZ-xX-y6x" firstAttribute="top" secondItem="FnK-Dc-Wcl" secondAttribute="bottom" constant="8" id="zvx-7L-9qQ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="authorLabel" destination="HZr-Oh-ie6" id="3NF-aC-C97"/>
+                <outlet property="authorLabel" destination="uEZ-xX-y6x" id="PTB-yz-qXH"/>
                 <outlet property="bookImageView" destination="gez-8b-f67" id="9Gt-dR-VoQ"/>
-                <outlet property="menuButton" destination="Sgx-fX-pn2" id="b59-5R-ff6"/>
-                <outlet property="publisherLabel" destination="JyF-aU-oWl" id="XTr-R7-5qZ"/>
-                <outlet property="titleLabel" destination="AJB-WX-2QP" id="KJv-CG-7MJ"/>
+                <outlet property="ratingsView" destination="e8q-Uh-sIS" id="1bC-po-fB0"/>
+                <outlet property="subTitleLabel" destination="4IN-YI-20k" id="Uz0-wz-2AG"/>
+                <outlet property="titleLabel" destination="FnK-Dc-Wcl" id="U2l-hb-RH8"/>
             </connections>
-            <point key="canvasLocation" x="173.18840579710147" y="125.22321428571428"/>
+            <point key="canvasLocation" x="237.68115942028987" y="195.20089285714286"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ellipsis.circle.fill" catalog="system" width="64" height="60"/>
-    </resources>
 </document>
