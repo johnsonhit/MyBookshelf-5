@@ -25,6 +25,8 @@
 		ABC857F82362B65C00CA2BE5 /* Constraints+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */; };
 		ABC857FA2363BE4B00CA2BE5 /* BookDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857F92363BE4B00CA2BE5 /* BookDetailVC.swift */; };
 		ABC857FC2363BFA900CA2BE5 /* BookDetailEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857FB2363BFA900CA2BE5 /* BookDetailEndpoint.swift */; };
+		ABC858042363E70C00CA2BE5 /* BookDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858022363E70C00CA2BE5 /* BookDetailHeaderCell.swift */; };
+		ABC858052363E70C00CA2BE5 /* BookDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC858032363E70C00CA2BE5 /* BookDetailHeaderCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constraints+UIView.swift"; sourceTree = "<group>"; };
 		ABC857F92363BE4B00CA2BE5 /* BookDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailVC.swift; sourceTree = "<group>"; };
 		ABC857FB2363BFA900CA2BE5 /* BookDetailEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailEndpoint.swift; sourceTree = "<group>"; };
+		ABC858022363E70C00CA2BE5 /* BookDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderCell.swift; sourceTree = "<group>"; };
+		ABC858032363E70C00CA2BE5 /* BookDetailHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailHeaderCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +101,8 @@
 		ABC857CF236169E300CA2BE5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ABC857F92363BE4B00CA2BE5 /* BookDetailVC.swift */,
-				ABC857D0236169F700CA2BE5 /* NewBooksVC.swift */,
+				ABC858002363E6A800CA2BE5 /* BookDetail */,
+				ABC857FF2363E69800CA2BE5 /* NewBooks */,
 				ABC857D423616A5600CA2BE5 /* SearchBooksVC.swift */,
 				ABC857D523616A5600CA2BE5 /* SearchBooksVC.xib */,
 			);
@@ -136,7 +140,6 @@
 		ABC857E72362AE9100CA2BE5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				ABC857EF2362AF4100CA2BE5 /* CollectionViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -157,6 +160,33 @@
 				ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ABC857FF2363E69800CA2BE5 /* NewBooks */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857EF2362AF4100CA2BE5 /* CollectionViewCells */,
+				ABC857D0236169F700CA2BE5 /* NewBooksVC.swift */,
+			);
+			path = NewBooks;
+			sourceTree = "<group>";
+		};
+		ABC858002363E6A800CA2BE5 /* BookDetail */ = {
+			isa = PBXGroup;
+			children = (
+				ABC858012363E6E200CA2BE5 /* TableViewCells */,
+				ABC857F92363BE4B00CA2BE5 /* BookDetailVC.swift */,
+			);
+			path = BookDetail;
+			sourceTree = "<group>";
+		};
+		ABC858012363E6E200CA2BE5 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ABC858022363E70C00CA2BE5 /* BookDetailHeaderCell.swift */,
+				ABC858032363E70C00CA2BE5 /* BookDetailHeaderCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +250,7 @@
 				ABC857F32362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib in Resources */,
 				ABC857D723616A5600CA2BE5 /* SearchBooksVC.xib in Resources */,
 				ABC857C82361657400CA2BE5 /* LaunchScreen.storyboard in Resources */,
+				ABC858052363E70C00CA2BE5 /* BookDetailHeaderCell.xib in Resources */,
 				ABC857C52361657400CA2BE5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +268,7 @@
 				ABC857BC2361657300CA2BE5 /* AppDelegate.swift in Sources */,
 				ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */,
 				ABC857E6236172E300CA2BE5 /* Book.swift in Sources */,
+				ABC858042363E70C00CA2BE5 /* BookDetailHeaderCell.swift in Sources */,
 				ABC857FC2363BFA900CA2BE5 /* BookDetailEndpoint.swift in Sources */,
 				ABC857F22362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift in Sources */,
 				ABC857FA2363BE4B00CA2BE5 /* BookDetailVC.swift in Sources */,

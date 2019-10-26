@@ -17,11 +17,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        // Entire nav controller is animated under the nav bar, so the view behind it is the window's background.
+        // Setting background color to white will ensure navbar background color remains white
+        // https://stackoverflow.com/a/27665512
+        window?.backgroundColor = UIColor.white
 
         let networkManager = NetworkManager()
 
         let tabBarVC = UITabBarController()
-        tabBarVC.viewControllers = [NewBooksVC(networkManager: networkManager), SearchBooksVC()]
+        tabBarVC.tabBar.isTranslucent = false
+        let newBooksNav = UINavigationController(rootViewController: NewBooksVC(networkManager: networkManager))
+        let searchBooksNav = UINavigationController(rootViewController: SearchBooksVC())
+        tabBarVC.viewControllers = [newBooksNav, searchBooksNav]
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()
     }
