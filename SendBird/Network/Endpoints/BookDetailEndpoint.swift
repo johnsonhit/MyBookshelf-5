@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BookDetail: Endpoint {
+class BookDetailEndpoint: Endpoint {
     var httpMethod: HttpMethod = .get
     lazy var path: String = "books/\(isbn)"
 

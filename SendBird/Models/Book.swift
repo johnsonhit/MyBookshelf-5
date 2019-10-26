@@ -15,4 +15,11 @@ struct Book: Codable {
     var price: String
     var image: String
     var url: String
+    var publisher: String?
+    var isbn10: String?
+    var pages: String?
+    var year: String?
+    var rating: String?
+    var description: String?
+    var pdf: [String: String]?
 }

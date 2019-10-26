@@ -10,21 +10,29 @@ import UIKit
 
 class BookDetailVC: UIViewController {
 
+    private let networkManager: NetworkManager
+    var book: Book
+
+    public init(book: Book, networkManager: NetworkManager) {
+        self.book = book
+        self.networkManager = networkManager
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getBookDetail()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func getBookDetail() {
+        networkManager.makeRequest(for: BookDetailEndpoint(isbn: book.isbn13), with: Book.self) { [weak self] (book) in
+            guard let self = self else { return }
+            self.book = book
+        }
     }
-    */
 
 }
