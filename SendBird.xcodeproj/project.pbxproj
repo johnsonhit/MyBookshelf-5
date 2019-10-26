@@ -27,6 +27,7 @@
 		ABC857FC2363BFA900CA2BE5 /* BookDetailEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857FB2363BFA900CA2BE5 /* BookDetailEndpoint.swift */; };
 		ABC858042363E70C00CA2BE5 /* BookDetailHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858022363E70C00CA2BE5 /* BookDetailHeaderCell.swift */; };
 		ABC858052363E70C00CA2BE5 /* BookDetailHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC858032363E70C00CA2BE5 /* BookDetailHeaderCell.xib */; };
+		ABC858092364E10100CA2BE5 /* SB+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858082364E10100CA2BE5 /* SB+UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		ABC857FB2363BFA900CA2BE5 /* BookDetailEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailEndpoint.swift; sourceTree = "<group>"; };
 		ABC858022363E70C00CA2BE5 /* BookDetailHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailHeaderCell.swift; sourceTree = "<group>"; };
 		ABC858032363E70C00CA2BE5 /* BookDetailHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailHeaderCell.xib; sourceTree = "<group>"; };
+		ABC858082364E10100CA2BE5 /* SB+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+UITableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			children = (
 				ABC857F52362B13E00CA2BE5 /* SB+UIImageView.swift */,
 				ABC857F72362B65C00CA2BE5 /* Constraints+UIView.swift */,
+				ABC858082364E10100CA2BE5 /* SB+UITableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC858092364E10100CA2BE5 /* SB+UITableView.swift in Sources */,
 				ABC857E4236172C100CA2BE5 /* NewBooksResponse.swift in Sources */,
 				ABC857D1236169F700CA2BE5 /* NewBooksVC.swift in Sources */,
 				ABC857E12361715700CA2BE5 /* NewBooksEndpoint.swift in Sources */,

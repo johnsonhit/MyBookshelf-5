@@ -15,6 +15,7 @@ class BookDetailVC: UIViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.registerNib(from: BookDetailHeaderCell.self)
         return tableView
     }()
 
@@ -49,7 +50,7 @@ class BookDetailVC: UIViewController {
                 let book = book
                 else { return }
             self.book = book
-            self.displayBookDetails()
+            self.tableView.reloadData()
         }
     }
 
@@ -74,11 +75,13 @@ extension BookDetailVC {
 // MARK: - UITableViewDataSource
 extension BookDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let bookDetailHeaderCell: BookDetailHeaderCell = tableView.dequeReusableCell() else { return UITableViewCell() }
+        bookDetailHeaderCell.configure(book: book)
+        return bookDetailHeaderCell
     }
 
 }
