@@ -56,7 +56,7 @@ class BookDetailVC: UIViewController {
     }
 
     private func getBookDetail() {
-        networkManager.makeRequest(for: BookDetailEndpoint(isbn: "9781617294136"), with: Book.self) { [weak self] (book) in
+        networkManager.makeRequest(for: BookDetailEndpoint(isbn: book.isbn13), with: Book.self) { [weak self] (book) in
             guard let self = self,
                 let book = book
                 else { return }
