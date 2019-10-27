@@ -21,7 +21,7 @@ struct Book: Codable {
     var pages: String?
     var year: String?
     var rating: String?
-    var description: String?
+    var desc: String?
     var pdf: [String: String]?
 }
 

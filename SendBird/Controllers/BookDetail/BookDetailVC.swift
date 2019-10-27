@@ -17,6 +17,9 @@ class BookDetailVC: UIViewController {
         tableView.dataSource = self
         tableView.registerNib(from: BookDetailHeaderCell.self)
         tableView.registerNib(from: BookDetailStatsCell.self)
+        tableView.registerNib(from: BookDetailPDFCell.self)
+        // Removes empty rows
+        tableView.tableFooterView = UIView()
         return tableView
     }()
 
@@ -76,16 +79,17 @@ extension BookDetailVC {
     }
 }
 
-private enum BookDetailCell: Int {
+private enum BookDetailCell: Int, CaseIterable {
     case header = 0
     case description = 1
     case statistics = 2
+    case pdfs = 3
 }
 
 // MARK: - UITableViewDataSource
 extension BookDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return BookDetailCell.allCases.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -99,12 +103,17 @@ extension BookDetailVC: UITableViewDataSource {
         case .description:
             let cell = UITableViewCell()
             cell.textLabel?.numberOfLines = 0
-            cell.textLabel?.text = book.subtitle
+            cell.textLabel?.text = book.desc
             return cell
         case .statistics:
             if let bookDetailStatsCell: BookDetailStatsCell = tableView.dequeReusableCell() {
                 bookDetailStatsCell.configure(book: book)
                 return bookDetailStatsCell
+            }
+        case .pdfs:
+            if let bookDetailPDFCell: BookDetailPDFCell = tableView.dequeReusableCell() {
+                bookDetailPDFCell.configure(pdfs: book.pdf ?? [:])
+                return bookDetailPDFCell
             }
         case .none:
             return UITableViewCell()
@@ -112,5 +121,4 @@ extension BookDetailVC: UITableViewDataSource {
         // This should never reach
         return UITableViewCell()
     }
-
 }
