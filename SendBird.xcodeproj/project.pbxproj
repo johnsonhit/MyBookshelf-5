@@ -31,6 +31,10 @@
 		ABC8580B2365024900CA2BE5 /* RatingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8580A2365024900CA2BE5 /* RatingsView.swift */; };
 		ABC8580D2365025000CA2BE5 /* RatingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC8580C2365025000CA2BE5 /* RatingsView.xib */; };
 		ABC8580F2365026800CA2BE5 /* SB+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8580E2365026800CA2BE5 /* SB+UIView.swift */; };
+		ABC8581F23650C1A00CA2BE5 /* BookDetailStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8581D23650C1A00CA2BE5 /* BookDetailStatsCell.swift */; };
+		ABC8582023650C1A00CA2BE5 /* BookDetailStatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC8581E23650C1A00CA2BE5 /* BookDetailStatsCell.xib */; };
+		ABC8582423650C5B00CA2BE5 /* StatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8582223650C5B00CA2BE5 /* StatsCell.swift */; };
+		ABC8582523650C5B00CA2BE5 /* StatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC8582323650C5B00CA2BE5 /* StatsCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +64,10 @@
 		ABC8580A2365024900CA2BE5 /* RatingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsView.swift; sourceTree = "<group>"; };
 		ABC8580C2365025000CA2BE5 /* RatingsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingsView.xib; sourceTree = "<group>"; };
 		ABC8580E2365026800CA2BE5 /* SB+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+UIView.swift"; sourceTree = "<group>"; };
+		ABC8581D23650C1A00CA2BE5 /* BookDetailStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailStatsCell.swift; sourceTree = "<group>"; };
+		ABC8581E23650C1A00CA2BE5 /* BookDetailStatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookDetailStatsCell.xib; sourceTree = "<group>"; };
+		ABC8582223650C5B00CA2BE5 /* StatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsCell.swift; sourceTree = "<group>"; };
+		ABC8582323650C5B00CA2BE5 /* StatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatsCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,7 @@
 		ABC858002363E6A800CA2BE5 /* BookDetail */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8582123650C2000CA2BE5 /* CollectionViewCells */,
 				ABC858012363E6E200CA2BE5 /* TableViewCells */,
 				ABC857F92363BE4B00CA2BE5 /* BookDetailVC.swift */,
 			);
@@ -197,8 +206,19 @@
 			children = (
 				ABC858022363E70C00CA2BE5 /* BookDetailHeaderCell.swift */,
 				ABC858032363E70C00CA2BE5 /* BookDetailHeaderCell.xib */,
+				ABC8581D23650C1A00CA2BE5 /* BookDetailStatsCell.swift */,
+				ABC8581E23650C1A00CA2BE5 /* BookDetailStatsCell.xib */,
 			);
 			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		ABC8582123650C2000CA2BE5 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ABC8582223650C5B00CA2BE5 /* StatsCell.swift */,
+				ABC8582323650C5B00CA2BE5 /* StatsCell.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +284,9 @@
 				ABC857C82361657400CA2BE5 /* LaunchScreen.storyboard in Resources */,
 				ABC858052363E70C00CA2BE5 /* BookDetailHeaderCell.xib in Resources */,
 				ABC857C52361657400CA2BE5 /* Assets.xcassets in Resources */,
+				ABC8582523650C5B00CA2BE5 /* StatsCell.xib in Resources */,
 				ABC8580D2365025000CA2BE5 /* RatingsView.xib in Resources */,
+				ABC8582023650C1A00CA2BE5 /* BookDetailStatsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,9 +306,11 @@
 				ABC8580B2365024900CA2BE5 /* RatingsView.swift in Sources */,
 				ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */,
 				ABC857E6236172E300CA2BE5 /* Book.swift in Sources */,
+				ABC8582423650C5B00CA2BE5 /* StatsCell.swift in Sources */,
 				ABC858042363E70C00CA2BE5 /* BookDetailHeaderCell.swift in Sources */,
 				ABC857FC2363BFA900CA2BE5 /* BookDetailEndpoint.swift in Sources */,
 				ABC857F22362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift in Sources */,
+				ABC8581F23650C1A00CA2BE5 /* BookDetailStatsCell.swift in Sources */,
 				ABC857FA2363BE4B00CA2BE5 /* BookDetailVC.swift in Sources */,
 				ABC857DA23616BF500CA2BE5 /* NetworkManager.swift in Sources */,
 				ABC857F62362B13E00CA2BE5 /* SB+UIImageView.swift in Sources */,

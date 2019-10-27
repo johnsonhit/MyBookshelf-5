@@ -16,6 +16,7 @@ class BookDetailVC: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.registerNib(from: BookDetailHeaderCell.self)
+        tableView.registerNib(from: BookDetailStatsCell.self)
         return tableView
     }()
 
@@ -34,6 +35,7 @@ class BookDetailVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        styleNavigationBar()
         getBookDetail()
         layoutViews()
     }
@@ -44,6 +46,12 @@ class BookDetailVC: UIViewController {
         super.viewSafeAreaInsetsDidChange()
     }
 
+    private func styleNavigationBar() {
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.title = book.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: book.price, style: .done, target: nil, action: nil)
+    }
+
     private func getBookDetail() {
         networkManager.makeRequest(for: BookDetailEndpoint(isbn: book.isbn13), with: Book.self) { [weak self] (book) in
             guard let self = self,
@@ -52,10 +60,6 @@ class BookDetailVC: UIViewController {
             self.book = book
             self.tableView.reloadData()
         }
-    }
-
-    private func displayBookDetails() {
-
     }
 
 }
@@ -75,12 +79,13 @@ extension BookDetailVC {
 private enum BookDetailCell: Int {
     case header = 0
     case description = 1
+    case statistics = 2
 }
 
 // MARK: - UITableViewDataSource
 extension BookDetailVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,6 +101,11 @@ extension BookDetailVC: UITableViewDataSource {
             cell.textLabel?.numberOfLines = 0
             cell.textLabel?.text = book.subtitle
             return cell
+        case .statistics:
+            if let bookDetailStatsCell: BookDetailStatsCell = tableView.dequeReusableCell() {
+                bookDetailStatsCell.configure(book: book)
+                return bookDetailStatsCell
+            }
         case .none:
             return UITableViewCell()
         }

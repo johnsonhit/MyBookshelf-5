@@ -24,3 +24,28 @@ struct Book: Codable {
     var description: String?
     var pdf: [String: String]?
 }
+
+extension Book {
+    var statistics: [BookStatistic] {
+        var bookStats: [BookStatistic] = []
+        if let year = year {
+            bookStats.append(BookStatistic(title: "RELEASED", value: year, definition: nil))
+        }
+        if let pages = pages {
+            bookStats.append(BookStatistic(title: "LENGTH", value: pages, definition: "Pages"))
+        }
+        if let publisher = publisher {
+            bookStats.append(BookStatistic(title: "PUBLISHER", value: publisher, definition: nil))
+        }
+        if let isbn10 = isbn10 {
+            bookStats.append(BookStatistic(title: "ISBN10", value: isbn10, definition: nil))
+        }
+        return bookStats
+    }
+}
+
+struct BookStatistic {
+    var title: String
+    var value: String
+    var definition: String?
+}

@@ -16,7 +16,6 @@ class BookDetailHeaderCell: UITableViewCell {
     @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var ratingsView: RatingsView!
 
-
     func configure(book: Book) {
         bookImageView.asyncLoadImage(from: book.image)
         subTitleLabel.text = book.subtitle
