@@ -13,9 +13,15 @@ struct PDFInformation {
     let link: String
 }
 
+protocol BookDetailPDFCellDelegate: class {
+    func bookDetailPDF(_ cell: BookDetailPDFCell, didPressLink urlLink: URL)
+}
+
 class BookDetailPDFCell: UITableViewCell {
 
     @IBOutlet private weak var tableView: ContentSizingTableView!
+
+    weak var delegate: BookDetailPDFCellDelegate?
 
     private var indexedPDFs: [PDFInformation] = []
     
@@ -29,6 +35,7 @@ class BookDetailPDFCell: UITableViewCell {
 
     private func configureTableview() {
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.registerNib(from: PDFCell.self)
     }
     
@@ -44,5 +51,14 @@ extension BookDetailPDFCell: UITableViewDataSource {
         let pdfInformation = indexedPDFs[indexPath.row]
         cell.configure(pdfInformation: pdfInformation)
         return cell
+    }
+}
+
+extension BookDetailPDFCell: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let pdfInformation = indexedPDFs[indexPath.row]
+        if let pdfURL = URL(string: pdfInformation.link) {
+            delegate?.bookDetailPDF(self, didPressLink: pdfURL)
+        }
     }
 }

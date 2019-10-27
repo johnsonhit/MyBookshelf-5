@@ -56,7 +56,7 @@ class BookDetailVC: UIViewController {
     }
 
     private func getBookDetail() {
-        networkManager.makeRequest(for: BookDetailEndpoint(isbn: book.isbn13), with: Book.self) { [weak self] (book) in
+        networkManager.makeRequest(for: BookDetailEndpoint(isbn: "9781617294136"), with: Book.self) { [weak self] (book) in
             guard let self = self,
                 let book = book
                 else { return }
@@ -113,6 +113,7 @@ extension BookDetailVC: UITableViewDataSource {
         case .pdfs:
             if let bookDetailPDFCell: BookDetailPDFCell = tableView.dequeReusableCell() {
                 bookDetailPDFCell.configure(pdfs: book.pdf ?? [:])
+                bookDetailPDFCell.delegate = self
                 return bookDetailPDFCell
             }
         case .none:
@@ -120,5 +121,11 @@ extension BookDetailVC: UITableViewDataSource {
         }
         // This should never reach
         return UITableViewCell()
+    }
+}
+
+extension BookDetailVC: BookDetailPDFCellDelegate {
+    func bookDetailPDF(_ cell: BookDetailPDFCell, didPressLink urlLink: URL) {
+        UIApplication.shared.open(urlLink)
     }
 }
