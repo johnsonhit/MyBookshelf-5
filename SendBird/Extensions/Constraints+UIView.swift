@@ -9,22 +9,22 @@
 import UIKit
 
 extension UIView {
-    func constraintToTopSafeArea(of view: UIView) -> NSLayoutConstraint {
+    func constraintToTopSafeArea(of view: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
         let topSafeAreaIdentifier = "topSafeAreaCons"
         removePreviousConstraint(from: view, with: topSafeAreaIdentifier)
 
         let topSafeInsets = view.safeAreaInsets.top
-        let topSafeAreaCons = topAnchor.constraint(equalTo: view.topAnchor, constant: topSafeInsets)
+        let topSafeAreaCons = topAnchor.constraint(equalTo: view.topAnchor, constant: topSafeInsets + constant)
         topSafeAreaCons.identifier = topSafeAreaIdentifier
         return topSafeAreaCons
     }
 
-    func constraintToBottomSafeArea(of view: UIView) -> NSLayoutConstraint {
+    func constraintToBottomSafeArea(of view: UIView, constant: CGFloat = 0) -> NSLayoutConstraint {
         let bottomSafeAreaIdentifier = "bottomSafeAreaCons"
         removePreviousConstraint(from: view, with: bottomSafeAreaIdentifier)
 
         let bottomSafeInsets = view.safeAreaInsets.bottom
-        let bottomSafeAreaCons = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomSafeInsets)
+        let bottomSafeAreaCons = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -bottomSafeInsets + constant)
         bottomSafeAreaCons.identifier = bottomSafeAreaIdentifier
         return bottomSafeAreaCons
     }

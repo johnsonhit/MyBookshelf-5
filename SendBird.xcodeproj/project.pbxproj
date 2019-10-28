@@ -39,8 +39,8 @@
 		ABC8582C23651AF400CA2BE5 /* PDFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8582A23651AF400CA2BE5 /* PDFCell.swift */; };
 		ABC8582D23651AF400CA2BE5 /* PDFCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC8582B23651AF400CA2BE5 /* PDFCell.xib */; };
 		ABC85830236522F400CA2BE5 /* ContentSizingTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8582F236522F400CA2BE5 /* ContentSizingTableView.swift */; };
-		ABC858342365586800CA2BE5 /* SearchbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC858332365586800CA2BE5 /* SearchbarView.xib */; };
-		ABC858362366147200CA2BE5 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858352366147200CA2BE5 /* SearchbarView.swift */; };
+		ABC85838236667BE00CA2BE5 /* SearchbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC85837236667BE00CA2BE5 /* SearchbarView.swift */; };
+		ABC8583A236667C700CA2BE5 /* SearchbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC85839236667C700CA2BE5 /* SearchbarView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,8 +78,8 @@
 		ABC8582A23651AF400CA2BE5 /* PDFCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFCell.swift; sourceTree = "<group>"; };
 		ABC8582B23651AF400CA2BE5 /* PDFCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PDFCell.xib; sourceTree = "<group>"; };
 		ABC8582F236522F400CA2BE5 /* ContentSizingTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizingTableView.swift; sourceTree = "<group>"; };
-		ABC858332365586800CA2BE5 /* SearchbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchbarView.xib; sourceTree = "<group>"; };
-		ABC858352366147200CA2BE5 /* SearchbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
+		ABC85837236667BE00CA2BE5 /* SearchbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarView.swift; sourceTree = "<group>"; };
+		ABC85839236667C700CA2BE5 /* SearchbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchbarView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +170,8 @@
 			children = (
 				ABC8580A2365024900CA2BE5 /* RatingsView.swift */,
 				ABC8580C2365025000CA2BE5 /* RatingsView.xib */,
-				ABC858352366147200CA2BE5 /* SearchbarView.swift */,
-				ABC858332365586800CA2BE5 /* SearchbarView.xib */,
+				ABC85837236667BE00CA2BE5 /* SearchbarView.swift */,
+				ABC85839236667C700CA2BE5 /* SearchbarView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -309,8 +309,8 @@
 				ABC8582D23651AF400CA2BE5 /* PDFCell.xib in Resources */,
 				ABC857C82361657400CA2BE5 /* LaunchScreen.storyboard in Resources */,
 				ABC858052363E70C00CA2BE5 /* BookDetailHeaderCell.xib in Resources */,
+				ABC8583A236667C700CA2BE5 /* SearchbarView.xib in Resources */,
 				ABC857C52361657400CA2BE5 /* Assets.xcassets in Resources */,
-				ABC858342365586800CA2BE5 /* SearchbarView.xib in Resources */,
 				ABC8582523650C5B00CA2BE5 /* StatsCell.xib in Resources */,
 				ABC858292365199700CA2BE5 /* BookDetailPDFCell.xib in Resources */,
 				ABC8580D2365025000CA2BE5 /* RatingsView.xib in Resources */,
@@ -330,7 +330,6 @@
 				ABC857D1236169F700CA2BE5 /* NewBooksVC.swift in Sources */,
 				ABC857E12361715700CA2BE5 /* NewBooksEndpoint.swift in Sources */,
 				ABC857BC2361657300CA2BE5 /* AppDelegate.swift in Sources */,
-				ABC858362366147200CA2BE5 /* SearchbarView.swift in Sources */,
 				ABC8580F2365026800CA2BE5 /* SB+UIView.swift in Sources */,
 				ABC8580B2365024900CA2BE5 /* RatingsView.swift in Sources */,
 				ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */,
@@ -346,6 +345,7 @@
 				ABC857FA2363BE4B00CA2BE5 /* BookDetailVC.swift in Sources */,
 				ABC857DA23616BF500CA2BE5 /* NetworkManager.swift in Sources */,
 				ABC857F62362B13E00CA2BE5 /* SB+UIImageView.swift in Sources */,
+				ABC85838236667BE00CA2BE5 /* SearchbarView.swift in Sources */,
 				ABC857D623616A5600CA2BE5 /* SearchBooksVC.swift in Sources */,
 				ABC857BE2361657300CA2BE5 /* SceneDelegate.swift in Sources */,
 				ABC857F82362B65C00CA2BE5 /* Constraints+UIView.swift in Sources */,

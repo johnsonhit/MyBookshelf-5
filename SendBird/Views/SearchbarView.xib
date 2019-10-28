@@ -9,36 +9,36 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchbarView" customModule="SendBird" customModuleProvider="target">
             <connections>
-                <outlet property="searchButton" destination="fCh-yl-2bv" id="Xrf-2n-DW8"/>
-                <outlet property="textField" destination="COu-dL-VQX" id="3Jx-EQ-V9v"/>
+                <outlet property="searchButton" destination="730-Yz-05J" id="3uA-NZ-DTh"/>
+                <outlet property="textField" destination="s8S-HH-Ghy" id="kTa-uI-jte"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="464" height="185"/>
+            <rect key="frame" x="0.0" y="0.0" width="490" height="210"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Books" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="COu-dL-VQX">
-                    <rect key="frame" x="16" y="80.5" width="376" height="34"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search Books" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s8S-HH-Ghy">
+                    <rect key="frame" x="0.0" y="93" width="426" height="34"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fCh-yl-2bv">
-                    <rect key="frame" x="400" y="82.5" width="48" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="730-Yz-05J">
+                    <rect key="frame" x="442" y="95" width="48" height="30"/>
                     <state key="normal" title="Search"/>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="COu-dL-VQX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="FBn-wG-Gzf"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fCh-yl-2bv" secondAttribute="trailing" constant="16" id="TwN-ws-JXS"/>
-                <constraint firstItem="COu-dL-VQX" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="WfB-F0-Sfd"/>
-                <constraint firstItem="fCh-yl-2bv" firstAttribute="centerY" secondItem="COu-dL-VQX" secondAttribute="centerY" id="ayB-dE-ZSc"/>
-                <constraint firstItem="fCh-yl-2bv" firstAttribute="leading" secondItem="COu-dL-VQX" secondAttribute="trailing" constant="8" id="yHH-g9-j2H"/>
+                <constraint firstItem="730-Yz-05J" firstAttribute="leading" secondItem="s8S-HH-Ghy" secondAttribute="trailing" constant="16" id="1aL-WV-oda"/>
+                <constraint firstItem="s8S-HH-Ghy" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="GTT-jx-DxW"/>
+                <constraint firstItem="730-Yz-05J" firstAttribute="centerY" secondItem="s8S-HH-Ghy" secondAttribute="centerY" id="SVi-Ge-jy7"/>
+                <constraint firstItem="s8S-HH-Ghy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="c7o-S7-o4L"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="730-Yz-05J" secondAttribute="trailing" id="e66-dR-Iom"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="182.60869565217394" y="-146.31696428571428"/>
+            <point key="canvasLocation" x="186.95652173913044" y="-131.25"/>
         </view>
     </objects>
 </document>
