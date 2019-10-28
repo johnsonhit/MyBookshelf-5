@@ -63,10 +63,8 @@ class SearchBooksVC: UIViewController {
     }
 
     private func populatePreviousSearches() {
-        let request = Search.createFetchRequest()
-        let sort = NSSortDescriptor(key: "date", ascending: false)
-        request.sortDescriptors = [sort]
-        previousSearches = CoreDataManager.shared.fetchData(for: request)
+        let fetchRequest = Search.fetchRequestByDate()
+        previousSearches = CoreDataManager.shared.fetchData(for: fetchRequest)
         tableView.reloadData()
     }
 

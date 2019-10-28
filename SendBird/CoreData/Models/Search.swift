@@ -14,7 +14,14 @@ class Search: NSManagedObject {
     @NSManaged var query: String
     @NSManaged var date: Date
 
-    @nonobjc public class func createFetchRequest() -> NSFetchRequest<Search> {
+    public class func fetchRequestByDate() -> NSFetchRequest<Search> {
+        let request = Search.createFetchRequest()
+        let sort = NSSortDescriptor(key: "date", ascending: false)
+        request.sortDescriptors = [sort]
+        return request
+    }
+
+    private class func createFetchRequest() -> NSFetchRequest<Search> {
         return NSFetchRequest<Search>(entityName: String(describing: Search.self))
     }
 }
