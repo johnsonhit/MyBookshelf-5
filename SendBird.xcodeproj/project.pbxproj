@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB6D9C4F2366B595001C317A /* SB+XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6D9C4E2366B595001C317A /* SB+XCTestCase.swift */; };
 		ABC857BC2361657300CA2BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857BB2361657300CA2BE5 /* AppDelegate.swift */; };
 		ABC857BE2361657300CA2BE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC857BD2361657300CA2BE5 /* SceneDelegate.swift */; };
 		ABC857C52361657400CA2BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABC857C42361657400CA2BE5 /* Assets.xcassets */; };
@@ -51,9 +52,22 @@
 		ABC8584D236688AD00CA2BE5 /* SendBird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABC8584B236688AD00CA2BE5 /* SendBird.xcdatamodeld */; };
 		ABC858512366892E00CA2BE5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858502366892E00CA2BE5 /* Search.swift */; };
 		ABC8585323668EBE00CA2BE5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8585223668EBE00CA2BE5 /* CoreDataManager.swift */; };
+		ABC858642366AF3400CA2BE5 /* NewBooksResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858632366AF3400CA2BE5 /* NewBooksResponseTest.swift */; };
+		ABC858692366AF8200CA2BE5 /* MockNewBooksResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = ABC858682366AF8200CA2BE5 /* MockNewBooksResponse.json */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		ABC8585D2366AEFF00CA2BE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC857B02361657300CA2BE5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABC857B72361657300CA2BE5;
+			remoteInfo = SendBird;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		AB6D9C4E2366B595001C317A /* SB+XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+XCTestCase.swift"; sourceTree = "<group>"; };
 		ABC857B82361657300CA2BE5 /* SendBird.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SendBird.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABC857BB2361657300CA2BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABC857BD2361657300CA2BE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,10 +114,21 @@
 		ABC8584C236688AD00CA2BE5 /* SendBird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SendBird.xcdatamodel; sourceTree = "<group>"; };
 		ABC858502366892E00CA2BE5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		ABC8585223668EBE00CA2BE5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		ABC858582366AEFE00CA2BE5 /* SendBirdTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SendBirdTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABC8585C2366AEFF00CA2BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABC858632366AF3400CA2BE5 /* NewBooksResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBooksResponseTest.swift; sourceTree = "<group>"; };
+		ABC858682366AF8200CA2BE5 /* MockNewBooksResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = MockNewBooksResponse.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		ABC857B52361657300CA2BE5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABC858552366AEFE00CA2BE5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -117,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				ABC857BA2361657300CA2BE5 /* SendBird */,
+				ABC858592366AEFE00CA2BE5 /* SendBirdTests */,
 				ABC857B92361657300CA2BE5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				ABC857B82361657300CA2BE5 /* SendBird.app */,
+				ABC858582366AEFE00CA2BE5 /* SendBirdTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -309,6 +336,33 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		ABC858592366AEFE00CA2BE5 /* SendBirdTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABC858622366AF1300CA2BE5 /* ResponseTests */,
+				ABC8585C2366AEFF00CA2BE5 /* Info.plist */,
+				AB6D9C4E2366B595001C317A /* SB+XCTestCase.swift */,
+			);
+			path = SendBirdTests;
+			sourceTree = "<group>";
+		};
+		ABC858622366AF1300CA2BE5 /* ResponseTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABC858652366AF3D00CA2BE5 /* NewBooks */,
+			);
+			path = ResponseTests;
+			sourceTree = "<group>";
+		};
+		ABC858652366AF3D00CA2BE5 /* NewBooks */ = {
+			isa = PBXGroup;
+			children = (
+				ABC858632366AF3400CA2BE5 /* NewBooksResponseTest.swift */,
+				ABC858682366AF8200CA2BE5 /* MockNewBooksResponse.json */,
+			);
+			path = NewBooks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -329,6 +383,24 @@
 			productReference = ABC857B82361657300CA2BE5 /* SendBird.app */;
 			productType = "com.apple.product-type.application";
 		};
+		ABC858572366AEFE00CA2BE5 /* SendBirdTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABC8585F2366AEFF00CA2BE5 /* Build configuration list for PBXNativeTarget "SendBirdTests" */;
+			buildPhases = (
+				ABC858542366AEFE00CA2BE5 /* Sources */,
+				ABC858552366AEFE00CA2BE5 /* Frameworks */,
+				ABC858562366AEFE00CA2BE5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABC8585E2366AEFF00CA2BE5 /* PBXTargetDependency */,
+			);
+			name = SendBirdTests;
+			productName = SendBirdTests;
+			productReference = ABC858582366AEFE00CA2BE5 /* SendBirdTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -341,6 +413,10 @@
 				TargetAttributes = {
 					ABC857B72361657300CA2BE5 = {
 						CreatedOnToolsVersion = 11.1;
+					};
+					ABC858572366AEFE00CA2BE5 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = ABC857B72361657300CA2BE5;
 					};
 				};
 			};
@@ -358,6 +434,7 @@
 			projectRoot = "";
 			targets = (
 				ABC857B72361657300CA2BE5 /* SendBird */,
+				ABC858572366AEFE00CA2BE5 /* SendBirdTests */,
 			);
 		};
 /* End PBXProject section */
@@ -378,6 +455,14 @@
 				ABC858292365199700CA2BE5 /* BookDetailPDFCell.xib in Resources */,
 				ABC8580D2365025000CA2BE5 /* RatingsView.xib in Resources */,
 				ABC8582023650C1A00CA2BE5 /* BookDetailStatsCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABC858562366AEFE00CA2BE5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABC858692366AF8200CA2BE5 /* MockNewBooksResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,7 +509,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		ABC858542366AEFE00CA2BE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AB6D9C4F2366B595001C317A /* SB+XCTestCase.swift in Sources */,
+				ABC858642366AF3400CA2BE5 /* NewBooksResponseTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABC8585E2366AEFF00CA2BE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABC857B72361657300CA2BE5 /* SendBird */;
+			targetProxy = ABC8585D2366AEFF00CA2BE5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		ABC857C62361657400CA2BE5 /* LaunchScreen.storyboard */ = {
@@ -588,6 +690,46 @@
 			};
 			name = Release;
 		};
+		ABC858602366AEFF00CA2BE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZ54V4GKAZ;
+				INFOPLIST_FILE = SendBirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = onCompany.SendBirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendBird.app/SendBird";
+			};
+			name = Debug;
+		};
+		ABC858612366AEFF00CA2BE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PZ54V4GKAZ;
+				INFOPLIST_FILE = SendBirdTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = onCompany.SendBirdTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SendBird.app/SendBird";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -605,6 +747,15 @@
 			buildConfigurations = (
 				ABC857CD2361657400CA2BE5 /* Debug */,
 				ABC857CE2361657400CA2BE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABC8585F2366AEFF00CA2BE5 /* Build configuration list for PBXNativeTarget "SendBirdTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABC858602366AEFF00CA2BE5 /* Debug */,
+				ABC858612366AEFF00CA2BE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
