@@ -15,7 +15,7 @@ protocol SearchbarViewDelegate: class {
 class SearchbarView: UIView {
 
     @IBOutlet private weak var textField: UITextField!
-    @IBOutlet private weak var searchButton: UIButton!
+    @IBOutlet private weak var cancelButton: UIButton!
 
     weak var delegate: SearchbarViewDelegate?
 
@@ -37,7 +37,7 @@ class SearchbarView: UIView {
 
     private func commonInit() {
         addNibView(from: SearchbarView.self)
-        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        cancelButton.addTarget(self, action: #selector(cancelButtonTapped), for: .touchUpInside)
         textField.addImage(UIImage(systemName: "magnifyingglass"),
                            iconSize: 24,
                            padding: 8,
@@ -45,8 +45,9 @@ class SearchbarView: UIView {
         textField.delegate = self
     }
 
-    @objc private func searchButtonTapped() {
-        let _ = textField.delegate?.textFieldShouldReturn?(textField)
+    @objc private func cancelButtonTapped() {
+        textField.text = ""
+        textField.resignFirstResponder()
     }
 
 }
