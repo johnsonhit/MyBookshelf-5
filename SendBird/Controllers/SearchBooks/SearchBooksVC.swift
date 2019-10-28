@@ -10,7 +10,11 @@ import UIKit
 
 class SearchBooksVC: UIViewController {
 
-    private let searchbarView = SearchbarView()
+    private lazy var searchbarView: SearchbarView = {
+        let searchbarView = SearchbarView()
+        searchbarView.delegate = self
+        return searchbarView
+    }()
 
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -43,5 +47,11 @@ extension SearchBooksVC {
             searchbarView.heightAnchor.constraint(equalToConstant: 44)
         ]
         NSLayoutConstraint.activate(searchbarCons)
+    }
+}
+
+extension SearchBooksVC: SearchbarViewDelegate {
+    func searchbarView(_ view: SearchbarView, searchTapped forString: String) {
+        print(forString)
     }
 }

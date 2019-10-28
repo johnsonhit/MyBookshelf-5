@@ -32,14 +32,11 @@ class SearchbarView: UIView {
 
     private func commonInit() {
         addNibView(from: SearchbarView.self)
-        let padding = 8
-        let iconSize = 24
-        let imageContainerView = UIView(frame: CGRect(x: 0, y: 0, width: iconSize + padding , height: iconSize))
-        let imageView = UIImageView(frame: CGRect(x: padding, y: 0, width: iconSize, height: iconSize))
-        imageView.image = UIImage(systemName: "magnifyingglass")
-        imageContainerView.addSubview(imageView)
-        textField.leftView = imageContainerView
-        textField.leftViewMode = .always
+        searchButton.addTarget(self, action: #selector(searchButtonTapped), for: .touchUpInside)
+        textField.addImage(UIImage(systemName: "magnifyingglass"),
+                           iconSize: 24,
+                           padding: 8,
+                           textfieldView: .left)
     }
 
     @objc private func searchButtonTapped() {
