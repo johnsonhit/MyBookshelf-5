@@ -20,6 +20,7 @@ class SearchBooksVC: UIViewController {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
+        tableView.delegate = self
         return tableView
     }()
 
@@ -117,6 +118,6 @@ extension SearchBooksVC: UITableViewDataSource {
 extension SearchBooksVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let previousSearch = previousSearches[indexPath.row]
-        
+        navigationController?.pushViewController(SearchResultsVC(networkManager: networkManager, searchString: previousSearch.query), animated: true)
     }
 }

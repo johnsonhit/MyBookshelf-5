@@ -32,7 +32,7 @@ class SearchbarView: UIView {
 
     public func overrideQuery(with query: String) {
         textField.text = query
-        searchButtonTapped()
+        let _ = textField.delegate?.textFieldShouldReturn?(textField)
     }
 
     private func commonInit() {
@@ -42,10 +42,19 @@ class SearchbarView: UIView {
                            iconSize: 24,
                            padding: 8,
                            textfieldView: .left)
+        textField.delegate = self
     }
 
     @objc private func searchButtonTapped() {
-        delegate?.searchbarView(self, searchTapped: textField.text ?? "")
+        let _ = textField.delegate?.textFieldShouldReturn?(textField)
     }
 
+}
+
+extension SearchbarView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        delegate?.searchbarView(self, searchTapped: textField.text ?? "")
+        return true
+    }
 }

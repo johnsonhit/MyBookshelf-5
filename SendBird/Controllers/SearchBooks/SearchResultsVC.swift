@@ -24,7 +24,7 @@ class SearchResultsVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "No Results"
         label.font = UIFont.systemFont(ofSize: 17)
-        label.isHidden = true
+        label.alpha = 0
         return label
     }()
 
@@ -84,8 +84,15 @@ class SearchResultsVC: UIViewController {
 
     private func displayNoResults() {
         let noResultsFound = endOfSearch && numberOfBooks == 0
-        noResultLabel.isHidden = !noResultsFound
-        tableView.isHidden = noResultsFound
+        if noResultsFound {
+            UIView.animate(withDuration: 0.5, animations: {
+                self.noResultLabel.alpha = 1
+                self.tableView.alpha = 0
+            }) { (_) in
+                self.noResultLabel.alpha = 1
+                self.tableView.alpha = 0
+            }
+        }
     }
 
 }
