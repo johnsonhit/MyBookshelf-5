@@ -129,9 +129,11 @@ extension SearchResultsVC: UITableViewDelegate {
         navigationController?.pushViewController(BookDetailVC(networkManager: networkManager, book: book), animated: true)
     }
 
+    // Adds pagination functionality
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard !endOfSearch else { return }
-        if indexPath.row == numberOfBooks - 1 {
+        let endOfTableView = indexPath.row == numberOfBooks - 1
+        if endOfTableView {
             page += 1
             getSearchResults()
         }
