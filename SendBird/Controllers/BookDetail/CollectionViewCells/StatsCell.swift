@@ -10,11 +10,13 @@ import UIKit
 
 class StatsCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var valueLabel: UILabel!
-    @IBOutlet weak var definitionLabel: UILabel!
+    // MARK: - View Components
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var valueLabel: UILabel!
+    @IBOutlet private weak var definitionLabel: UILabel!
 
-    func configure(statistic: BookStatistic) {
+    // MARK: - Public Methods
+    public func configure(statistic: BookStatistic) {
         titleLabel.text = statistic.title
         valueLabel.text = statistic.value
         definitionLabel.text = statistic.definition

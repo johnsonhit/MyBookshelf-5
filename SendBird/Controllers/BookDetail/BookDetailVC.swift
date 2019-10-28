@@ -23,10 +23,12 @@ class BookDetailVC: UIViewController {
         return tableView
     }()
 
+    // MARK: - Class Properties
     private let networkManager: NetworkManager
 
     private var book: Book
 
+    // MARK: - Lifecycle Methods
     public init(networkManager: NetworkManager, book: Book) {
         self.book = book
         self.networkManager = networkManager
@@ -50,6 +52,7 @@ class BookDetailVC: UIViewController {
         super.viewSafeAreaInsetsDidChange()
     }
 
+    // MARK: - Private Methods
     private func styleNavigationBar() {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = book.title
@@ -125,6 +128,7 @@ extension BookDetailVC: UITableViewDataSource {
     }
 }
 
+// MARK: - BookDetailPDFCellDelegate
 extension BookDetailVC: BookDetailPDFCellDelegate {
     func bookDetailPDF(_ cell: BookDetailPDFCell, didPressLink urlLink: URL) {
         UIApplication.shared.open(urlLink)

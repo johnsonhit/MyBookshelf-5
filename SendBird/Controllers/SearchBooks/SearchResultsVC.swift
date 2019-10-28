@@ -10,6 +10,7 @@ import UIKit
 
 class SearchResultsVC: UIViewController {
 
+    // MARK: - View Components
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.dataSource = self
@@ -28,6 +29,7 @@ class SearchResultsVC: UIViewController {
         return label
     }()
 
+    // MARK: - Class Properties
     private let networkManager: NetworkManager
     private let query: String
 
@@ -40,6 +42,7 @@ class SearchResultsVC: UIViewController {
         }
     }
 
+    // MARK: - Lifecycle Methods
     init(networkManager: NetworkManager, searchString: String) {
         self.networkManager = networkManager
         query = searchString
@@ -62,6 +65,7 @@ class SearchResultsVC: UIViewController {
         super.viewSafeAreaInsetsDidChange()
     }
 
+    // MARK: - Private Methods
     private func getSearchResults() {
         let searchQuery = "\(query)/\(page)"
         networkManager.makeRequest(for: SearchBooksEndpoint(query: searchQuery), with: SearchBooksResponse.self) { [weak self] (searchResult) in

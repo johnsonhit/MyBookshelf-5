@@ -37,6 +37,7 @@ class NewBooksVC: UIViewController {
         }
     }
 
+    // MARK: - Lifecycle Methods
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
         super.init(nibName: nil, bundle: nil)
@@ -60,6 +61,7 @@ class NewBooksVC: UIViewController {
         super.viewSafeAreaInsetsDidChange()
     }
 
+    // MARK: - Private Methods
     private func getBooks() {
         networkManager.makeRequest(for: NewBooksEndpoint(), with: NewBooksResponse.self) { [weak self] (newBooksResponse) in
             guard let self = self else { return }

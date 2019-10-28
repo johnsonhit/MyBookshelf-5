@@ -14,11 +14,14 @@ protocol SearchbarViewDelegate: class {
 
 class SearchbarView: UIView {
 
+    // MARK: - View Components
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var cancelButton: UIButton!
 
+    // MARK: - Class Properties
     weak var delegate: SearchbarViewDelegate?
 
+    // MARK: - Lifecycle Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -28,11 +31,6 @@ class SearchbarView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
-    }
-
-    public func overrideQuery(with query: String) {
-        textField.text = query
-        let _ = textField.delegate?.textFieldShouldReturn?(textField)
     }
 
     private func commonInit() {
@@ -45,6 +43,13 @@ class SearchbarView: UIView {
         textField.delegate = self
     }
 
+    // MARK: - Public Methods
+    public func overrideQuery(with query: String) {
+        textField.text = query
+        let _ = textField.delegate?.textFieldShouldReturn?(textField)
+    }
+
+    // MARK: - Private Methods
     @objc private func cancelButtonTapped() {
         textField.text = ""
         textField.resignFirstResponder()
@@ -52,6 +57,7 @@ class SearchbarView: UIView {
 
 }
 
+// MARK: - UITextFieldDelegate
 extension SearchbarView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()

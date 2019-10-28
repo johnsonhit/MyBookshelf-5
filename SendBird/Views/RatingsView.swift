@@ -13,14 +13,17 @@ import UIKit
 /// height >= 24
 class RatingsView: UIView {
 
-    @IBOutlet weak var firstStarImageView: UIImageView!
-    @IBOutlet weak var secondStarImageView: UIImageView!
-    @IBOutlet weak var thirdStarImageView: UIImageView!
-    @IBOutlet weak var fourthStarImageView: UIImageView!
-    @IBOutlet weak var fifthStarImageView: UIImageView!
+    // MARK: - View Components
+    @IBOutlet private weak var firstStarImageView: UIImageView!
+    @IBOutlet private weak var secondStarImageView: UIImageView!
+    @IBOutlet private weak var thirdStarImageView: UIImageView!
+    @IBOutlet private weak var fourthStarImageView: UIImageView!
+    @IBOutlet private weak var fifthStarImageView: UIImageView!
 
+    // MARK: - Class Properties
     private lazy var stars = [firstStarImageView, secondStarImageView, thirdStarImageView, fourthStarImageView, fifthStarImageView]
 
+    // MARK: - Lifecycle Methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -35,11 +38,13 @@ class RatingsView: UIView {
         addNibView(from: RatingsView.self)
     }
 
+    // MARK: - Public Methods
     public func configure(bookRatings: String?) {
         let ratingsFloored = Int(bookRatings ?? "") ?? 0
         fillNumberOfStars(ratingsFloored)
     }
 
+    // MARK: - Private Methods
     private func fillNumberOfStars(_ starsToFill: Int) {
         guard starsToFill <= stars.count + 1 else { return }
         for starNumber in 0 ..< starsToFill {

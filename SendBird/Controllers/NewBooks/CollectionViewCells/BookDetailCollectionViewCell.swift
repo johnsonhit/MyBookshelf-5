@@ -16,6 +16,7 @@ class BookDetailCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var bookSubtitleLabel: UILabel!
     @IBOutlet private weak var bookPriceLabel: UILabel!
 
+    // MARK: - Public Methods
     public func configure(book: Book) {
         bookTitleLabel.text = book.title
         bookSubtitleLabel.text = book.subtitle

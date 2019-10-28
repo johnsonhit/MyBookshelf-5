@@ -10,11 +10,13 @@ import UIKit
 
 class SearchBookCell: UITableViewCell {
 
-    @IBOutlet weak var bookImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subtitleLabel: UILabel!
-    @IBOutlet weak var priceLabel: UILabel!
+    // MARK: - View Components
+    @IBOutlet private weak var bookImageView: UIImageView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subtitleLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
 
+    // MARK: - public Methods
     public func configure(book: Book) {
         bookImageView.asyncLoadImage(from: book.image)
         titleLabel.text = book.title

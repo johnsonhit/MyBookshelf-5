@@ -10,6 +10,7 @@ import UIKit
 
 class SearchBooksVC: UIViewController {
 
+    // MARK: - View Components
     private lazy var searchbarView: SearchbarView = {
         let searchbarView = SearchbarView()
         searchbarView.delegate = self
@@ -25,10 +26,12 @@ class SearchBooksVC: UIViewController {
         return tableView
     }()
 
+    // MARK: - Class Properties
     private let networkManager: NetworkManager
 
     private var previousSearches: [Search] = []
 
+    // MARK: - Lifecycle Methods
     init(networkManager: NetworkManager) {
         self.networkManager = networkManager
         super.init(nibName: nil, bundle: nil)
@@ -55,6 +58,7 @@ class SearchBooksVC: UIViewController {
         populatePreviousSearches()
     }
 
+    // MARK: - Private Methods
     private func saveSearchQuery(_ searchQuery: String) {
         let search = Search(context: CoreDataManager.shared.container.viewContext)
         search.query = searchQuery
@@ -91,6 +95,7 @@ extension SearchBooksVC {
     }
 }
 
+// MARK: - SearchbarViewDelegate
 extension SearchBooksVC: SearchbarViewDelegate {
     func searchbarView(_ view: SearchbarView, searchTapped forString: String) {
         saveSearchQuery(forString)
@@ -98,6 +103,7 @@ extension SearchBooksVC: SearchbarViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension SearchBooksVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return previousSearches.count
@@ -114,6 +120,7 @@ extension SearchBooksVC: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SearchBooksVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let previousSearch = previousSearches[indexPath.row]

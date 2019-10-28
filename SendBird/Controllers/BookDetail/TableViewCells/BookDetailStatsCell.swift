@@ -10,17 +10,22 @@ import UIKit
 
 class BookDetailStatsCell: UITableViewCell {
 
+    // MARK: - View Components
     @IBOutlet weak var collectionView: UICollectionView!
 
+    // MARK: - Class Properties
     private let statsCellString = String(describing: StatsCell.self)
+
     private var bookStatistics: [BookStatistic] = []
-    
-    func configure(book: Book) {
+
+    // MARK: - Public Methods
+    public func configure(book: Book) {
         configureCollectionView()
         bookStatistics = book.statistics
         collectionView.reloadData()
     }
 
+    // MARK: - Private Methods
     private func configureCollectionView() {
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -44,6 +49,7 @@ extension BookDetailStatsCell: UICollectionViewDataSource {
     }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension BookDetailStatsCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)

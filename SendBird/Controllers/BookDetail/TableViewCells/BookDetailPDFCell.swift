@@ -19,12 +19,15 @@ protocol BookDetailPDFCellDelegate: class {
 
 class BookDetailPDFCell: UITableViewCell {
 
+    // MARK: - View Components
     @IBOutlet private weak var tableView: ContentSizingTableView!
 
+    // MARK: - Class Properties
     weak var delegate: BookDetailPDFCellDelegate?
 
     private var indexedPDFs: [PDFInformation] = []
-    
+
+    // MARK: - Public Methods
     public func configure(pdfs: [String: String]) {
         configureTableview()
         for (key, value) in pdfs {
@@ -33,6 +36,7 @@ class BookDetailPDFCell: UITableViewCell {
         tableView.reloadData()
     }
 
+    // MARK: - Private Methods
     private func configureTableview() {
         tableView.dataSource = self
         tableView.delegate = self
@@ -41,6 +45,7 @@ class BookDetailPDFCell: UITableViewCell {
     
 }
 
+// MARK: - UITableViewDataSource
 extension BookDetailPDFCell: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return indexedPDFs.count
@@ -54,6 +59,7 @@ extension BookDetailPDFCell: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension BookDetailPDFCell: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let pdfInformation = indexedPDFs[indexPath.row]

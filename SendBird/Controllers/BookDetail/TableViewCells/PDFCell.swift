@@ -10,10 +10,12 @@ import UIKit
 
 class PDFCell: UITableViewCell {
 
-    @IBOutlet weak var chapterLabel: UILabel!
-    @IBOutlet weak var linkButton: UIButton!
+    // MARK: - View Components
+    @IBOutlet private weak var chapterLabel: UILabel!
+    @IBOutlet private weak var linkButton: UIButton!
 
-    func configure(pdfInformation: PDFInformation) {
+    // MARK: - Public Methods
+    public func configure(pdfInformation: PDFInformation) {
         chapterLabel.text = pdfInformation.chapter
         linkButton.setTitle(pdfInformation.link, for: .normal)
     }
