@@ -19,11 +19,26 @@ class SearchResultsVC: UIViewController {
         return tableView
     }()
 
+    private let noResultLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "No Results"
+        label.font = UIFont.systemFont(ofSize: 17)
+        label.isHidden = true
+        return label
+    }()
+
     private let networkManager: NetworkManager
     private let query: String
 
     private var page: Int = 1
+    private var numberOfBooks = 0
     private var books: [Book] = []
+    private var endOfSearch = false {
+        didSet {
+            displayNoResults()
+        }
+    }
 
     init(networkManager: NetworkManager, searchString: String) {
         self.networkManager = networkManager
@@ -51,9 +66,26 @@ class SearchResultsVC: UIViewController {
         let searchQuery = "\(query)/\(page)"
         networkManager.makeRequest(for: SearchBooksEndpoint(query: searchQuery), with: SearchBooksResponse.self) { [weak self] (searchResult) in
             guard let self = self else { return }
-            self.books = searchResult?.books ?? []
-            self.tableView.reloadData()
+            let books = searchResult?.books ?? []
+            // If search results in 0 books, we assume they have reached end of the search
+            if books.isEmpty {
+                self.endOfSearch = true
+                return
+            }
+            self.addBooksToTableView(books)
         }
+    }
+
+    private func addBooksToTableView(_ books: [Book]) {
+        self.books.append(contentsOf: books)
+        self.tableView.insertRows(at: IndexPath.createIndexPaths(from: self.numberOfBooks, to: self.numberOfBooks + books.count - 1), with: .automatic)
+        self.numberOfBooks += books.count
+    }
+
+    private func displayNoResults() {
+        let noResultsFound = endOfSearch && numberOfBooks == 0
+        noResultLabel.isHidden = !noResultsFound
+        tableView.isHidden = noResultsFound
     }
 
 }
@@ -67,6 +99,13 @@ extension SearchResultsVC {
             tableView.rightAnchor.constraint(equalTo: view.rightAnchor)
         ]
         NSLayoutConstraint.activate(tableViewCons)
+
+        view.addSubview(noResultLabel)
+        let noResultLabelCons = [
+            noResultLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            noResultLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ]
+        NSLayoutConstraint.activate(noResultLabelCons)
     }
 }
 
@@ -87,5 +126,13 @@ extension SearchResultsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = books[indexPath.row]
         navigationController?.pushViewController(BookDetailVC(networkManager: networkManager, book: book), animated: true)
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard !endOfSearch else { return }
+        if indexPath.row == numberOfBooks - 1 {
+            page += 1
+            getSearchResults()
+        }
     }
 }

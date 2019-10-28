@@ -47,6 +47,7 @@
 		ABC858432366760A00CA2BE5 /* SearchBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */; };
 		ABC85847236677B300CA2BE5 /* SearchBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC85845236677B300CA2BE5 /* SearchBookCell.swift */; };
 		ABC85848236677B300CA2BE5 /* SearchBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC85846236677B300CA2BE5 /* SearchBookCell.xib */; };
+		ABC8584A2366852700CA2BE5 /* SB+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858492366852700CA2BE5 /* SB+IndexPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksResponse.swift; sourceTree = "<group>"; };
 		ABC85845236677B300CA2BE5 /* SearchBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCell.swift; sourceTree = "<group>"; };
 		ABC85846236677B300CA2BE5 /* SearchBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCell.xib; sourceTree = "<group>"; };
+		ABC858492366852700CA2BE5 /* SB+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+IndexPath.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +209,7 @@
 				ABC858082364E10100CA2BE5 /* SB+UITableView.swift */,
 				ABC8580E2365026800CA2BE5 /* SB+UIView.swift */,
 				ABC8583E23666EB400CA2BE5 /* SB+UITextField.swift */,
+				ABC858492366852700CA2BE5 /* SB+IndexPath.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				ABC857D1236169F700CA2BE5 /* NewBooksVC.swift in Sources */,
 				ABC857E12361715700CA2BE5 /* NewBooksEndpoint.swift in Sources */,
 				ABC857BC2361657300CA2BE5 /* AppDelegate.swift in Sources */,
+				ABC8584A2366852700CA2BE5 /* SB+IndexPath.swift in Sources */,
 				ABC8580F2365026800CA2BE5 /* SB+UIView.swift in Sources */,
 				ABC8580B2365024900CA2BE5 /* RatingsView.swift in Sources */,
 				ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */,
