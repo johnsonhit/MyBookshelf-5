@@ -122,6 +122,7 @@ extension SearchResultsVC: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension SearchResultsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let book = books[indexPath.row]
