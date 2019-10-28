@@ -16,8 +16,11 @@ class SearchBooksVC: UIViewController {
         return searchbarView
     }()
 
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+    private let networkManager: NetworkManager
+
+    init(networkManager: NetworkManager) {
+        self.networkManager = networkManager
+        super.init(nibName: nil, bundle: nil)
         title = "Search"
     }
 
@@ -52,6 +55,6 @@ extension SearchBooksVC {
 
 extension SearchBooksVC: SearchbarViewDelegate {
     func searchbarView(_ view: SearchbarView, searchTapped forString: String) {
-        print(forString)
+        navigationController?.pushViewController(SearchResultsVC(networkManager: networkManager, searchString: forString), animated: true)
     }
 }

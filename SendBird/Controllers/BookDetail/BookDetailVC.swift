@@ -24,9 +24,10 @@ class BookDetailVC: UIViewController {
     }()
 
     private let networkManager: NetworkManager
-    var book: Book
 
-    public init(book: Book, networkManager: NetworkManager) {
+    private var book: Book
+
+    public init(networkManager: NetworkManager, book: Book) {
         self.book = book
         self.networkManager = networkManager
         super.init(nibName: nil, bundle: nil)

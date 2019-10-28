@@ -43,6 +43,10 @@
 		ABC8583A236667C700CA2BE5 /* SearchbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC85839236667C700CA2BE5 /* SearchbarView.xib */; };
 		ABC8583D23666D7D00CA2BE5 /* SearchResultsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8583C23666D7D00CA2BE5 /* SearchResultsVC.swift */; };
 		ABC8583F23666EB400CA2BE5 /* SB+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8583E23666EB400CA2BE5 /* SB+UITextField.swift */; };
+		ABC85841236674EF00CA2BE5 /* SearchBooksEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC85840236674EF00CA2BE5 /* SearchBooksEndpoint.swift */; };
+		ABC858432366760A00CA2BE5 /* SearchBooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */; };
+		ABC85847236677B300CA2BE5 /* SearchBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC85845236677B300CA2BE5 /* SearchBookCell.swift */; };
+		ABC85848236677B300CA2BE5 /* SearchBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC85846236677B300CA2BE5 /* SearchBookCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +88,10 @@
 		ABC85839236667C700CA2BE5 /* SearchbarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchbarView.xib; sourceTree = "<group>"; };
 		ABC8583C23666D7D00CA2BE5 /* SearchResultsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsVC.swift; sourceTree = "<group>"; };
 		ABC8583E23666EB400CA2BE5 /* SB+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+UITextField.swift"; sourceTree = "<group>"; };
+		ABC85840236674EF00CA2BE5 /* SearchBooksEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksEndpoint.swift; sourceTree = "<group>"; };
+		ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBooksResponse.swift; sourceTree = "<group>"; };
+		ABC85845236677B300CA2BE5 /* SearchBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCell.swift; sourceTree = "<group>"; };
+		ABC85846236677B300CA2BE5 /* SearchBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,7 @@
 			children = (
 				ABC857E02361715700CA2BE5 /* NewBooksEndpoint.swift */,
 				ABC857FB2363BFA900CA2BE5 /* BookDetailEndpoint.swift */,
+				ABC85840236674EF00CA2BE5 /* SearchBooksEndpoint.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -165,6 +174,7 @@
 			children = (
 				ABC857E3236172C100CA2BE5 /* NewBooksResponse.swift */,
 				ABC857E5236172E300CA2BE5 /* Book.swift */,
+				ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,10 +265,20 @@
 		ABC8583B23666D6900CA2BE5 /* SearchBooks */ = {
 			isa = PBXGroup;
 			children = (
+				ABC858442366779000CA2BE5 /* TableViewCells */,
 				ABC857D423616A5600CA2BE5 /* SearchBooksVC.swift */,
 				ABC8583C23666D7D00CA2BE5 /* SearchResultsVC.swift */,
 			);
 			path = SearchBooks;
+			sourceTree = "<group>";
+		};
+		ABC858442366779000CA2BE5 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				ABC85845236677B300CA2BE5 /* SearchBookCell.swift */,
+				ABC85846236677B300CA2BE5 /* SearchBookCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +342,7 @@
 				ABC857F32362AF5D00CA2BE5 /* BookDetailCollectionViewCell.xib in Resources */,
 				ABC8582D23651AF400CA2BE5 /* PDFCell.xib in Resources */,
 				ABC857C82361657400CA2BE5 /* LaunchScreen.storyboard in Resources */,
+				ABC85848236677B300CA2BE5 /* SearchBookCell.xib in Resources */,
 				ABC858052363E70C00CA2BE5 /* BookDetailHeaderCell.xib in Resources */,
 				ABC8583A236667C700CA2BE5 /* SearchbarView.xib in Resources */,
 				ABC857C52361657400CA2BE5 /* Assets.xcassets in Resources */,
@@ -356,7 +377,9 @@
 				ABC8582C23651AF400CA2BE5 /* PDFCell.swift in Sources */,
 				ABC857FC2363BFA900CA2BE5 /* BookDetailEndpoint.swift in Sources */,
 				ABC857F22362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift in Sources */,
+				ABC85847236677B300CA2BE5 /* SearchBookCell.swift in Sources */,
 				ABC8581F23650C1A00CA2BE5 /* BookDetailStatsCell.swift in Sources */,
+				ABC85841236674EF00CA2BE5 /* SearchBooksEndpoint.swift in Sources */,
 				ABC85830236522F400CA2BE5 /* ContentSizingTableView.swift in Sources */,
 				ABC857FA2363BE4B00CA2BE5 /* BookDetailVC.swift in Sources */,
 				ABC857DA23616BF500CA2BE5 /* NetworkManager.swift in Sources */,
@@ -365,6 +388,7 @@
 				ABC857D623616A5600CA2BE5 /* SearchBooksVC.swift in Sources */,
 				ABC857BE2361657300CA2BE5 /* SceneDelegate.swift in Sources */,
 				ABC857F82362B65C00CA2BE5 /* Constraints+UIView.swift in Sources */,
+				ABC858432366760A00CA2BE5 /* SearchBooksResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

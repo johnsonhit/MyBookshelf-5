@@ -122,6 +122,6 @@ extension NewBooksVC: UICollectionViewDelegateFlowLayout {
 // MARK: - UICollectionViewDelegate
 extension NewBooksVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigationController?.pushViewController(BookDetailVC(book: books[indexPath.row], networkManager: networkManager), animated: true)
+        navigationController?.pushViewController(BookDetailVC(networkManager: networkManager, book: books[indexPath.row]), animated: true)
     }
 }

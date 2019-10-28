@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let tabBarVC = UITabBarController()
         tabBarVC.tabBar.isTranslucent = false
         let newBooksNav = UINavigationController(rootViewController: NewBooksVC(networkManager: networkManager))
-        let searchBooksNav = UINavigationController(rootViewController: SearchBooksVC())
+        let searchBooksNav = UINavigationController(rootViewController: SearchBooksVC(networkManager: networkManager))
         tabBarVC.viewControllers = [newBooksNav, searchBooksNav]
         window?.rootViewController = tabBarVC
         window?.makeKeyAndVisible()
