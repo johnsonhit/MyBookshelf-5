@@ -14,8 +14,8 @@ protocol SearchbarViewDelegate: class {
 
 class SearchbarView: UIView {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var searchButton: UIButton!
 
     weak var delegate: SearchbarViewDelegate?
 
@@ -28,6 +28,11 @@ class SearchbarView: UIView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
+    }
+
+    public func overrideQuery(with query: String) {
+        textField.text = query
+        searchButtonTapped()
     }
 
     private func commonInit() {

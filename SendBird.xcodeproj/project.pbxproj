@@ -48,6 +48,9 @@
 		ABC85847236677B300CA2BE5 /* SearchBookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC85845236677B300CA2BE5 /* SearchBookCell.swift */; };
 		ABC85848236677B300CA2BE5 /* SearchBookCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABC85846236677B300CA2BE5 /* SearchBookCell.xib */; };
 		ABC8584A2366852700CA2BE5 /* SB+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858492366852700CA2BE5 /* SB+IndexPath.swift */; };
+		ABC8584D236688AD00CA2BE5 /* SendBird.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABC8584B236688AD00CA2BE5 /* SendBird.xcdatamodeld */; };
+		ABC858512366892E00CA2BE5 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC858502366892E00CA2BE5 /* Search.swift */; };
+		ABC8585323668EBE00CA2BE5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8585223668EBE00CA2BE5 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +97,9 @@
 		ABC85845236677B300CA2BE5 /* SearchBookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBookCell.swift; sourceTree = "<group>"; };
 		ABC85846236677B300CA2BE5 /* SearchBookCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchBookCell.xib; sourceTree = "<group>"; };
 		ABC858492366852700CA2BE5 /* SB+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SB+IndexPath.swift"; sourceTree = "<group>"; };
+		ABC8584C236688AD00CA2BE5 /* SendBird.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SendBird.xcdatamodel; sourceTree = "<group>"; };
+		ABC858502366892E00CA2BE5 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		ABC8585223668EBE00CA2BE5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +132,7 @@
 		ABC857BA2361657300CA2BE5 /* SendBird */ = {
 			isa = PBXGroup;
 			children = (
+				ABC8584E2366890900CA2BE5 /* CoreData */,
 				ABC8582E236522E900CA2BE5 /* BaseClasses */,
 				ABC857E2236172B600CA2BE5 /* Models */,
 				ABC857F42362B13000CA2BE5 /* Extensions */,
@@ -284,6 +291,24 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		ABC8584E2366890900CA2BE5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				ABC8584F2366891300CA2BE5 /* Models */,
+				ABC8584B236688AD00CA2BE5 /* SendBird.xcdatamodeld */,
+				ABC8585223668EBE00CA2BE5 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		ABC8584F2366891300CA2BE5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ABC858502366892E00CA2BE5 /* Search.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -371,6 +396,7 @@
 				ABC857BC2361657300CA2BE5 /* AppDelegate.swift in Sources */,
 				ABC8584A2366852700CA2BE5 /* SB+IndexPath.swift in Sources */,
 				ABC8580F2365026800CA2BE5 /* SB+UIView.swift in Sources */,
+				ABC8584D236688AD00CA2BE5 /* SendBird.xcdatamodeld in Sources */,
 				ABC8580B2365024900CA2BE5 /* RatingsView.swift in Sources */,
 				ABC857DC23616CC700CA2BE5 /* EndpointProtocol.swift in Sources */,
 				ABC857E6236172E300CA2BE5 /* Book.swift in Sources */,
@@ -383,6 +409,7 @@
 				ABC857F22362AF5D00CA2BE5 /* BookDetailCollectionViewCell.swift in Sources */,
 				ABC85847236677B300CA2BE5 /* SearchBookCell.swift in Sources */,
 				ABC8581F23650C1A00CA2BE5 /* BookDetailStatsCell.swift in Sources */,
+				ABC8585323668EBE00CA2BE5 /* CoreDataManager.swift in Sources */,
 				ABC85841236674EF00CA2BE5 /* SearchBooksEndpoint.swift in Sources */,
 				ABC85830236522F400CA2BE5 /* ContentSizingTableView.swift in Sources */,
 				ABC857FA2363BE4B00CA2BE5 /* BookDetailVC.swift in Sources */,
@@ -390,6 +417,7 @@
 				ABC857F62362B13E00CA2BE5 /* SB+UIImageView.swift in Sources */,
 				ABC85838236667BE00CA2BE5 /* SearchbarView.swift in Sources */,
 				ABC857D623616A5600CA2BE5 /* SearchBooksVC.swift in Sources */,
+				ABC858512366892E00CA2BE5 /* Search.swift in Sources */,
 				ABC857BE2361657300CA2BE5 /* SceneDelegate.swift in Sources */,
 				ABC857F82362B65C00CA2BE5 /* Constraints+UIView.swift in Sources */,
 				ABC858432366760A00CA2BE5 /* SearchBooksResponse.swift in Sources */,
@@ -582,6 +610,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		ABC8584B236688AD00CA2BE5 /* SendBird.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				ABC8584C236688AD00CA2BE5 /* SendBird.xcdatamodel */,
+			);
+			currentVersion = ABC8584C236688AD00CA2BE5 /* SendBird.xcdatamodel */;
+			path = SendBird.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = ABC857B02361657300CA2BE5 /* Project object */;
 }
