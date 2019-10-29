@@ -1,5 +1,5 @@
-# SendBird
-SendBird iOS Project
+# Jonathan-On My Bookshelf Application
+iOS take-home project. Designs mimic Apple Books app.
 
 iOS Application contains four views.
 
