@@ -138,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB6D9C502367C4D9001C317A /* ResponseModels */ = {
+			isa = PBXGroup;
+			children = (
+				ABC857E3236172C100CA2BE5 /* NewBooksResponse.swift */,
+				ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */,
+			);
+			path = ResponseModels;
+			sourceTree = "<group>";
+		};
 		ABC857AF2361657300CA2BE5 = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +197,7 @@
 		ABC857D823616AF800CA2BE5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				AB6D9C502367C4D9001C317A /* ResponseModels */,
 				ABC857DD23616DFD00CA2BE5 /* Endpoints */,
 				ABC857D923616BF500CA2BE5 /* NetworkManager.swift */,
 				ABC857DB23616CC700CA2BE5 /* EndpointProtocol.swift */,
@@ -208,9 +218,7 @@
 		ABC857E2236172B600CA2BE5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				ABC857E3236172C100CA2BE5 /* NewBooksResponse.swift */,
 				ABC857E5236172E300CA2BE5 /* Book.swift */,
-				ABC858422366760A00CA2BE5 /* SearchBooksResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
