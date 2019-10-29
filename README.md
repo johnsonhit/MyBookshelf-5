@@ -6,6 +6,7 @@ iOS Application contains four views.
 1) New Books
 * Displays a list of new books 
 * Clicking on a book shows the book's details page
+![imagedesc](https://github.com/MochaTheCoder/SendBird/blob/master/Screen%20Shot%202019-10-28%20at%206.01.07%20PM.png)
 
 2) Book Detail
 * Displays detailed information of a book
